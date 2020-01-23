@@ -1,0 +1,11 @@
+CREATE SCHEMA `todo` ;
+CREATE TABLE `todo`.`todoapps` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `title` VARCHAR(50) NULL,
+  `description` VARCHAR(256) NULL,
+  `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` TIMESTAMP NOT NULL DEFAULT ON UPDATE CURRENT_TIMESTAMP,
+  `status` INT NOT NULL,
+  `category` VARCHAR(50) NULL,
+  `deadline` DATE NULL,
+  PRIMARY KEY (`id`));
